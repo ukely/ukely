@@ -83,9 +83,9 @@ alto = {
   s4 bf'4\2 a'\2 s
 
   % knows I will
-  bf'4\2 a'\2 s2
+  bf'4\2 (a'\2) s2
   % follow him...
-  g'4 f' e'\3 g' <f' d'> e'
+  g'4 (f') e'\3 (g') <f' d'> (e')
   % all my
   s2
   %life to him
