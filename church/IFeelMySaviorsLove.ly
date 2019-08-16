@@ -20,7 +20,7 @@ drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 TopChords = {
   \chordmode {
-    f a:m d:m g:m7 c:7 f:7 bf a:m g:m g:7
+    f a:m d:m g:m7 c:7 f:7 bf g:m g:7
   }
 }
 
