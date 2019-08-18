@@ -48,7 +48,7 @@ melody = {
   %To listen and to pray.
   <c' bf> f'8 a' <g' d' bf>4 <e' c' bf> <f' c' a>2
   %For the temple is a house of God,
-  <a' f'>8 <bf' g'> <c'' a'>4. <bf' g'>8 <a' f'> <c'' e'> bf' a' f'4
+  <a' f'>8 <bf' g'> <c'' f'>4. <bf' g'>8 <a' f'> <c'' e'> bf' a' f'4
   %A place of love and beauty.
   g'4 <a'^0 d'^2>4. g'8-3 <f'-1 d'> e' d'4 c'
   %I’ll prepare myself while I am young;
@@ -67,7 +67,7 @@ alto = {
   %To listen and to pray.
   s4 <c' a> s s s2
   %For the temple is a house of God,
-  s8 s8 s4. s8 s s d'2.
+  s8 s8 a2. d'2.
   %A place of love and beauty.
   b2-4 b4 bf?2
   %I’ll prepare myself while I am young;
