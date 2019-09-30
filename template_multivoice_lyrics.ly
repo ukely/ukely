@@ -18,6 +18,12 @@ This song may be copied for incidental, noncommercial stuff."
 \include "predefined-ukulele-fretboards.ly"
 drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
+% to change a chord shape
+%\storePredefinedDiagram #default-fret-table
+%                        \chordmode { a:m7 }
+%                        #ukulele-tuning
+%                        #"2-2;o;3-3;3-4;"
+
 TopChords = {
   \chordmode {
     f a:m d:m g:m7 c:7 f:7 bf a:m g:m g:7
