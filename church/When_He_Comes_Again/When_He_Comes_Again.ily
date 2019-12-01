@@ -1,11 +1,9 @@
-\version "2.18.2"
-\language "english"
-\include "../lib/barre.ly"
+\include "../../lib/barre.ily"
+\include "predefined-ukulele-fretboards.ly"
 
 \header {
     title = "When He Comes Again"
     composer = "Mirla Greenwood Thayne, 1907–1997"
-    instrument = "Drop-G Ukulele"
     arranger = "arr. Jordan Anderson"
     % these appear at bottom of page
     copyright = "© 1952 by Mirla Greenwood Thayne, Provo, Utah. Renewed 1980.
@@ -13,38 +11,57 @@ This song may be copied for church or home use."
     tagline = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/when-he-comes-again"
   }
 
-% Fret chords at top of piece
-
-\include "predefined-ukulele-fretboards.ly"
 drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 \storePredefinedDiagram #default-fret-table
                         \chordmode { a:m7 }
                         #ukulele-tuning
                         #"2-2;o;3-3;3-4;"
+% Chords
 
-TopChords = {
-  \chordmode {
+TopChords = \chordmode {
     f a:m7 g:m c:7 c bf g:7
-  }
 }
 
-\score{
-  <<
-    \new ChordNames {
-      \TopChords
-    }
-    \new FretBoards {
-      \set Staff.stringTunings = #ukulele-tuning
-      \TopChords
-    }
-  >>
+StaffChords = \chordmode {
+  s4 f2 a:m7 g:m c:7 g:m c f1
+  f2 a:m7 g:m c:7 g:m c f1
+  bf f c2 c:7 f1 bf f c2 g:7 c c:7
+  f2 a:m7 g:m c:7 g:m c f1
+  f2 a:m7 bf g:m c:7 c4 c:7 f2.
 }
-
 
 % Main music
 
 melody = {
+  % I wonder, when he comes again,
+  c'4 a'4. g'8 g'4 f' f'4. d'8 e'4.
+  % Will herald angels sing?
+  d'8 bf'4 d' e' d' c'2.
+  % Will earth be white with drifted snow,
+  c'4 a'4. g'8 g'4 f' f'4. d'8 e'4.
+  % Or will the world know spring?
+  d'8 e'4 d' c' g' f'2.
+  % I wonder if one star will shine
+  f'4 d' f' bf' d'' d''4. c''8 c''4
+  % Far brighter than the rest;
+  a'4 c''4. g'8 g'4 c'' c''2.
+  % Will daylight stay the whole night through?
+  f'4 d' f' bf' d'' d''4. c''8 c''4.
+  % Will songbirds leave their nests?
+  a'8 g'4 c'' b' d'' c''2.\fermata
+  % I’m sure he’ll call his little ones
+  c'4 a'4. g'8 g'4 f' f'4. d'8 e'4.
+  % Together ’round his knee,
+  d'8 bf'4 d' e' d' c'2.
+  % Because he said in days gone by,
+  c'4 f' a' c'' cs'' d'' d'' d'\fermata
+  % "Suffer them to come to me."
+  d'8 ds' e'4 g' c'' e' f'2.
+  \bar "|."
+}
+
+multivoicemelody = {
   % I wonder, when he comes again,
   c'4 <a' f'>4. <g' e'>8 <g' e'>4 <f' d'> <f' d'>4. d'8 <e' c'>4.
   % Will herald angels sing?
@@ -77,6 +94,7 @@ melody = {
   d'8 ds' e'4 g' <c'' g' e'> ^\markup{\tiny "B III"} e' <f' c' a>2.
   \bar "|."
 }
+
 alto = {
   % I wonder, when he comes again,
   s4 c'2 a bf bf
@@ -104,12 +122,31 @@ alto = {
   bf2 c'4\4 c'8 bf
 }
 
-StaffChords = \chordmode {
-  s4 f2 a:m7 g:m c:7 g:m c f1
-  f2 a:m7 g:m c:7 g:m c f1
-  bf f c2 c:7 f1 bf f c2 g:7 c c:7
-  f2 a:m7 g:m c:7 g:m c f1
-  f2 a:m7 bf g:m c:7 c4 c:7 f2.
+simplealto = {
+  % I wonder, when he comes again,
+  s4 c'2 a bf bf
+  % Will herald angels sing?
+  g2 bf a s
+  % Will earth be white with drifted snow,
+  c'2 a bf bf
+  % Or will the world know spring?
+  bf bf a s
+  % I wonder if one star will shine
+  bf d' f'\3 f'\3
+  % Far brighter than the rest;
+  e' c' f'4 g' a'\2 s4
+  % Will daylight stay the whole night through?
+  bf2 d' f'\3 f'\3
+  % Will songbirds leave their nests?
+  c' g' e' s
+  % I’m sure he’ll call his little ones
+  c' a bf bf
+  % Together ’round his knee,
+  g2 bf a s
+  % Because he said in days gone by,
+  c'2 f' bf'\2 g
+  % "Suffer them to come to me."
+  bf2 e'4 c' <c' a>2.
 }
 
 verseOne = \lyricmode {
@@ -140,30 +177,4 @@ verseTwo = \lyricmode {
   He’ll love me and he’ll say,
   “You’ve served me well, my lit -- tle child;
   Come un -- to my arms to stay.”
-}
-
-\score {
-  <<
-    \new ChordNames \StaffChords
-    \new StaffGroup <<
-      \new Staff <<
-        \time 4/4
-        \clef treble
-        \key f \major
-        \partial 4
-        \new Voice = "melodyVoice" { \voiceOne \melody }
-        \new Voice { \voiceTwo \alto }
-        \new Lyrics \lyricsto "melodyVoice" \verseOne
-        \new Lyrics \lyricsto "melodyVoice" \verseTwo
-      >>
-
-      \new TabStaff <<
-        \set TabStaff.stringTunings = #drop-g-ukulele-tuning
-        \absolute <<
-          \new TabVoice { \voiceOne \melody }
-          \new TabVoice { \voiceTwo \alto }
-        >>
-      >>
-    >>
-  >>
 }
