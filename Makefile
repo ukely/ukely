@@ -13,8 +13,11 @@ PDFDIR = pdf
 # The .pdf output files are put into the `PDF' subdirectory, and the
 # .midi files go into the `MIDI' subdirectory.
 #%.pdf %.midi: %.ly
-$(PDFDIR)/%.pdf: %.ly
+.SECONDEXPANSION:
+$(PDFDIR)/%.pdf: %.ly $$(shell echo "%" | cut -d"-" -f1).ily
 	@mkdir -p $(dir $@)
+	@echo
+	@echo "----------- Creating $(notdir $@) -----------"
 	$(LILY_CMD) $<; \
 	if test -f "$(notdir $*).pdf"; then \
 	    mv "$(notdir $*).pdf" $(PDFDIR)/$(subst .ly,.pdf,$<); \
@@ -23,7 +26,7 @@ $(PDFDIR)/%.pdf: %.ly
 #	    mv "$(notdir $*).midi" $(MIDIDIR)/$(subst .ly,.pdf,$<); \
 #	fi
 
-songs=$(wildcard church/*)
+songs=$(shell find . -name "*.ly" | grep -v template)
 
 pdfs=$(addprefix $(PDFDIR)/,$(songs:.ly=.pdf))
 
