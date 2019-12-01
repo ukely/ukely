@@ -1,6 +1,6 @@
 \version "2.18.2"
 \language "english"
-\include "../lib/barre.ly"
+\include "../lib/barre.ily"
 
 \header {
     title = "He Sent His Son"
@@ -19,7 +19,7 @@ drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 TopChords = {
   \chordmode {
-    f c:7sus4 c:7 g:m d:m g:7 f:7 bf a:7 d:7 bf:m
+    f c:7 g:m d:m g:7 f:7 bf a:7 d:7 bf:m
   }
 }
 
