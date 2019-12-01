@@ -1,6 +1,6 @@
 \version "2.18.2"
 \language "english"
-\include "../lib/barre.ly"
+\include "../lib/barre.ily"
 
 \header {
     title = "title here"
