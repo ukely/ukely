@@ -1,21 +1,21 @@
 \version "2.18.2"
 \language "english"
-\include "../lib/barre.ily"
+\include "../../lib/barre.ily"
+\include "predefined-ukulele-fretboards.ly"
 
 \header {
     title = "He Sent His Son"
     poet = "Mabel Jones Gabbott, 1910–2004"
     composer = "Michael Finlinson Moody, b. 1941"
-    instrument = "Drop-G Ukulele"
     arranger = "arr. Jordan Anderson"
     % these appear at bottom of page
     copyright = "© 1982 by Mabel Jones Gabbott and Michael Finlinson Moody. Arr. © 1989 IRI."
     tagline = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/he-sent-his-son"
   }
 
-% Fret chords at top of piece
-\include "predefined-ukulele-fretboards.ly"
 drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
+
+% Chords
 
 TopChords = {
   \chordmode {
@@ -23,18 +23,14 @@ TopChords = {
   }
 }
 
-\score{
-  <<
-    \new ChordNames {
-      \TopChords
-    }
-    \new FretBoards {
-      \set Staff.stringTunings = #ukulele-tuning
-      \TopChords
-    }
-  >>
+StaffChords = \chordmode {
+  f2. c:7 f c:7
+  f g:m c:7 f d:m g:7 f c:7 f g:m c:7 f:7
+  bf f4 g2:7 c2.:7 f
+  bf f4 d2:m g2.:m a:7
+  bf a4:7 d2:7 g2.:m c1.:7
+  f2. g:m c:7 f:7 bf f4 g2:7 c2.:7 f2. bf bf1.:m f
 }
-
 
 % Main music
 intro = {
@@ -130,15 +126,6 @@ alto = {
 
 }
 
-StaffChords = \chordmode {
-  f2. c:7 f c:7
-  f g:m c:7 f d:m g:7 f c:7 f g:m c:7 f:7
-  bf f4 g2:7 c2.:7 f
-  bf f4 d2:m g2.:m a:7
-  bf a4:7 d2:7 g2.:m c1.:7
-  f2. g:m c:7 f:7 bf f4 g2:7 c2.:7 f2. bf bf1.:m f
-}
-
 verseOne = \lyricmode {
   How could the Fa -- ther tell the world of love and ten -- der -- ness? _
   He sent his Son, a new -- born babe, with peace and ho -- li -- ness.
@@ -150,30 +137,4 @@ verseOne = \lyricmode {
   What does the Fa -- ther ask of us? What do the scrip -- tures say? _
   Have faith, have hope, live like his Son, help oth -- ers on their way. _ _
   What does he ask? _ Live like his Son.
-}
-
-\score {
-  <<
-    \new ChordNames \StaffChords
-    \new StaffGroup <<
-      \new Staff <<
-        \time 3/4
-        \clef treble
-        \key f \major
-        \new Voice { \intro }
-        \new Voice = "melodyVoice" { \voiceOne \melody }
-        \new Voice { \voiceTwo \alto }
-        \new Lyrics \lyricsto "melodyVoice" \verseOne
-      >>
-
-      \new TabStaff <<
-        \set TabStaff.stringTunings = #drop-g-ukulele-tuning
-        \absolute <<
-          \new TabVoice { \intro }
-          \new TabVoice { \voiceOne \melody }
-          \new TabVoice { \voiceTwo \alto }
-        >>
-      >>
-    >>
-  >>
 }
