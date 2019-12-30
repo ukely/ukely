@@ -36,3 +36,6 @@ print-%  : ; @echo $* = $($*)
 
 clean:
 	rm -rf $(PDFDIR)
+
+clean-all-pdf:
+	find . -name "*.pdf" -delete
