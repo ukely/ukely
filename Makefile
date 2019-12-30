@@ -12,9 +12,12 @@ PDFDIR = pdf
 # The pattern rule to create PDF and MIDI files from a LY input file.
 # The .pdf output files are put into the `PDF' subdirectory, and the
 # .midi files go into the `MIDI' subdirectory.
-#%.pdf %.midi: %.ly
+
+# The SECONDEXPANSION is to find ily dependencies, assuming the ily
+#  follows the convention base-variation.ly and base.ily.
+#  The shell command removes the '-variation' and wildcard checks it exists
 .SECONDEXPANSION:
-$(PDFDIR)/%.pdf: %.ly $$(shell echo "%" | cut -d"-" -f1).ily
+$(PDFDIR)/%.pdf: %.ly $$(wildcard $$(shell echo "%" | cut -d"-" -f1).ily)
 	@mkdir -p $(dir $@)
 	@echo
 	@echo "----------- Creating $(notdir $@) -----------"
@@ -22,6 +25,7 @@ $(PDFDIR)/%.pdf: %.ly $$(shell echo "%" | cut -d"-" -f1).ily
 	if test -f "$(notdir $*).pdf"; then \
 	    mv "$(notdir $*).pdf" $(PDFDIR)/$(subst .ly,.pdf,$<); \
 	fi; \
+# TODO, add midi targets?
 #	if test -f "$(notdir $*).midi"; then \
 #	    mv "$(notdir $*).midi" $(MIDIDIR)/$(subst .ly,.pdf,$<); \
 #	fi
