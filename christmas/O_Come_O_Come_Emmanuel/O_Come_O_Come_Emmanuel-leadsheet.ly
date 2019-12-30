@@ -1,6 +1,6 @@
-\include "template-include.ily"
+\include "O_Come_O_Come_Emmanuel.ily"
 \header {
-      instrument = "Drop-G Ukulele"
+      instrument = "Ukulele"
 }
 
 \score {
@@ -13,14 +13,16 @@
     \new StaffGroup <<
 
       \new TabStaff <<
-        \time 6/8
-        \key bf \major
+        \time 4/4
+        \key e \minor
         \partial 4
         \set TabStaff.stringTunings = #drop-g-ukulele-tuning
-        \new TabVoice { \voiceOne \leadintro }
         \new TabVoice = "melodyVoice" { \voiceOne \leadmelody }
         \new Lyrics \lyricsto "melodyVoice" \verseOne
         \new Lyrics \lyricsto "melodyVoice" \verseTwo
+        \new Lyrics \lyricsto "melodyVoice" \verseThree
+        \new Lyrics \lyricsto "melodyVoice" \verseFour
+        \new Lyrics \lyricsto "melodyVoice" \verseFive
       >>
     >>
   >>

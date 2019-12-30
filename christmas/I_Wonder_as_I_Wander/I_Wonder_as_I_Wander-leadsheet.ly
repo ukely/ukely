@@ -1,6 +1,6 @@
-\include "template-include.ily"
+\include "I_Wonder_as_I_Wander.ily"
 \header {
-      instrument = "Drop-G Ukulele"
+      instrument = "Ukulele"
 }
 
 \score {
@@ -13,14 +13,14 @@
     \new StaffGroup <<
 
       \new TabStaff <<
-        \time 6/8
-        \key bf \major
+        \time 3/4
+        \key a \minor
         \partial 4
         \set TabStaff.stringTunings = #drop-g-ukulele-tuning
-        \new TabVoice { \voiceOne \leadintro }
-        \new TabVoice = "melodyVoice" { \voiceOne \leadmelody }
+        \new TabVoice = "melodyVoice" { \voiceOne \keepWithTag #'easy \leadmelody }
         \new Lyrics \lyricsto "melodyVoice" \verseOne
         \new Lyrics \lyricsto "melodyVoice" \verseTwo
+        \new Lyrics \lyricsto "melodyVoice" \verseThree
       >>
     >>
   >>
