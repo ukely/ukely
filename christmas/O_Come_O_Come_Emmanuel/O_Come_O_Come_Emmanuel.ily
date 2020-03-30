@@ -1,6 +1,7 @@
 \version "2.18.2"
 \language "english"
 \include "predefined-ukulele-fretboards.ly"
+\include "../../lib/barre.ily"
 
 \header {
     title = "O Come, O Come, Emmanuel"
@@ -16,7 +17,7 @@ drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
 % Chords
 
 TopChords = \chordmode {
-  e:m a:m g d
+  e:m a:m g d d:m
 }
 
 StaffChords = \chordmode {
@@ -29,7 +30,7 @@ StaffChords = \chordmode {
 % Main music
 leadmelody = {
   % O come, O come, Emmanuel,
-  e'4\3 g' b' b' b'  a' c'' b' a' g'2.
+  e'4\3 g' b' b' b'  a' c'' \fbarre #"II"{b' a'} g'2.
   % And ransom captive Israel,
   a'4 b' g' e' g' a' fs' e' d' e'2.
   % That mourns in lonely exile here,
