@@ -38,8 +38,14 @@ all: $(pdfs)
 
 print-%  : ; @echo $* = $($*)
 
+.PHONY: release
+release: $(pdfs)
+	cd $(PDFDIR) && zip -r ../pdfs-$(shell date '+%Y%m%d').zip *
+
+.PHONY: clean
 clean:
 	rm -rf $(PDFDIR)
 
+.PHONY: clean-all-pdf
 clean-all-pdf:
 	find . -name "*.pdf" -delete
