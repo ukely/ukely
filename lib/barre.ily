@@ -1,3 +1,4 @@
+\version "2.20.0"
 %% Span -----------------------------------
 %% Syntax: \bbarre #"text" { notes } - text = any number of box
 fbarre =
