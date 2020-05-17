@@ -16,7 +16,7 @@
         \time 4/4
         \key e \minor
         \partial 4
-        \set TabStaff.stringTunings = #drop-g-ukulele-tuning
+        \set TabStaff.stringTunings = #low-g-ukulele-tuning
         \new TabVoice = "melodyVoice" { \voiceOne \leadmelody }
         \new Lyrics \lyricsto "melodyVoice" \verseOne
         \new Lyrics \lyricsto "melodyVoice" \verseTwo

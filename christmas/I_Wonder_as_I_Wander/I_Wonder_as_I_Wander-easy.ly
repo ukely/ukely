@@ -1,6 +1,6 @@
 \include "I_Wonder_as_I_Wander.ily"
 \header {
-      instrument = "Drop-G Ukulele"
+      instrument = "Low-G Ukulele"
 }
 
 \score {
@@ -32,7 +32,7 @@
       >>
 
       \new TabStaff <<
-        \set TabStaff.stringTunings = #drop-g-ukulele-tuning
+        \set TabStaff.stringTunings = #low-g-ukulele-tuning
         \absolute <<
           \new TabVoice { \voiceOne \keepWithTag #'easy \leadmelody }
           \new TabVoice { \voiceTwo \easyalto }

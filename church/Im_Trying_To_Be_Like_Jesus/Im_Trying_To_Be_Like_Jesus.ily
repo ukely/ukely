@@ -13,7 +13,7 @@ This song may be copied for incidental, noncommercial church or home use."
     tagline = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/im-trying-to-be-like-jesus"
   }
 
-drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
+low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 \storePredefinedDiagram #default-fret-table
                         \chordmode { d:7 }

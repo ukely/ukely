@@ -16,7 +16,7 @@
         \time 3/4
         \key a \minor
         \partial 4
-        \set TabStaff.stringTunings = #drop-g-ukulele-tuning
+        \set TabStaff.stringTunings = #low-g-ukulele-tuning
         \new TabVoice = "melodyVoice" { \voiceOne \keepWithTag #'easy \leadmelody }
         \new Lyrics \lyricsto "melodyVoice" \verseOne
         \new Lyrics \lyricsto "melodyVoice" \verseTwo

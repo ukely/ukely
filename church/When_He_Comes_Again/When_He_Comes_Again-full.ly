@@ -2,7 +2,7 @@
 \language "english"
 \include "When_He_Comes_Again.ily"
 \header {
-      instrument = "Drop-G Ukulele"
+      instrument = "Low-G Ukulele"
 }
 
 \score {
@@ -33,7 +33,7 @@
       >>
 
       \new TabStaff <<
-        \set TabStaff.stringTunings = #drop-g-ukulele-tuning
+        \set TabStaff.stringTunings = #low-g-ukulele-tuning
         \absolute <<
           \new TabVoice { \voiceOne \multivoicemelody }
           \new TabVoice { \voiceTwo \alto }

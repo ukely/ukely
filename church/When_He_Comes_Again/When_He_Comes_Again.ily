@@ -11,7 +11,7 @@ This song may be copied for church or home use."
     tagline = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/when-he-comes-again"
   }
 
-drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
+low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 \storePredefinedDiagram #default-fret-table
                         \chordmode { a:m7 }

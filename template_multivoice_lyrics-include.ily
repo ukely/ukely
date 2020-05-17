@@ -12,7 +12,7 @@
     tagline = "https://website.link"
   }
 
-drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
+low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 \storePredefinedDiagram #default-fret-table
                         \chordmode { d:7 }

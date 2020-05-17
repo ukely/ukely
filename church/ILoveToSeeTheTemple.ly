@@ -4,7 +4,7 @@
 \header {
     title = "I Love to See the Temple"
     composer = "Janice Kapp Perry, b. 1938"
-    instrument = "Drop-G Ukulele"
+    instrument = "Low-G Ukulele"
     arranger = "arr. Jordan Anderson"
     % these appear at bottom of page
     copyright = "© 1980 by Janice Kapp Perry.
@@ -15,7 +15,7 @@ This song may be copied for incidental, noncommercial church or home use."
 % Fret chords at top of piece
 
 \include "predefined-ukulele-fretboards.ly"
-drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
+low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 TopChords = {
   \chordmode {
@@ -119,7 +119,7 @@ verseTwo = \lyricmode {
       >>
 
       \new TabStaff <<
-        \set TabStaff.stringTunings = #drop-g-ukulele-tuning
+        \set TabStaff.stringTunings = #low-g-ukulele-tuning
         \absolute <<
           \new TabVoice { \voiceOne \melody }
           \new TabVoice { \voiceTwo \alto }

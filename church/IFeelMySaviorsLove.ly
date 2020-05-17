@@ -4,7 +4,7 @@
 \header {
     title = "I Feel My Savior's Love"
     composer = "K. Newell Dayley, b. 1939"
-    instrument = "Drop-G Ukulele"
+    instrument = "Low-G Ukulele"
     %poet = "Ralph Rodgers Jr., 1936–1996; K. Newell Dayley, b. 1939; and Laurie Huffman, b. 1948"
     arranger = "arr. Jordan Anderson"
     % these appear at bottom of page
@@ -16,7 +16,7 @@ This song may be copied for incidental, noncommercial church or home use."
 % Fret chords at top of piece
 
 \include "predefined-ukulele-fretboards.ly"
-drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
+low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 TopChords = {
   \chordmode {
@@ -155,7 +155,7 @@ verseFour = \lyricmode {
       >>
 
       \new TabStaff <<
-        \set TabStaff.stringTunings = #drop-g-ukulele-tuning
+        \set TabStaff.stringTunings = #low-g-ukulele-tuning
         \absolute <<
           \new TabVoice { \voiceOne \melody }
           \new TabVoice { \voiceTwo \alto }

@@ -13,7 +13,7 @@
     tagline = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/he-sent-his-son"
   }
 
-drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
+low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 % Chords
 

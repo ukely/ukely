@@ -1,6 +1,6 @@
 \include "Im_Trying_To_Be_Like_Jesus.ily"
 \header {
-      instrument = "Drop-G Ukulele"
+      instrument = "Low-G Ukulele"
 }
 
 \score {
@@ -15,7 +15,7 @@
       \new TabStaff <<
         \time 6/8
         \key bf \major
-        \set TabStaff.stringTunings = #drop-g-ukulele-tuning
+        \set TabStaff.stringTunings = #low-g-ukulele-tuning
         \new TabVoice { \voiceOne \leadintro }
         \new TabVoice = "melodyVoice" { \voiceOne \leadmelody }
         \new Lyrics \lyricsto "melodyVoice" \verseOne

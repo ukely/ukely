@@ -1,6 +1,6 @@
 \include "O_Come_O_Come_Emmanuel.ily"
 \header {
-      instrument = "Drop-G Ukulele"
+      instrument = "Low-G Ukulele"
 }
 
 #(set-global-staff-size 19.6)
@@ -36,7 +36,7 @@
       >>
 
       \new TabStaff <<
-        \set TabStaff.stringTunings = #drop-g-ukulele-tuning
+        \set TabStaff.stringTunings = #low-g-ukulele-tuning
         \absolute <<
           \new TabVoice { \voiceOne \leadmelody }
           \new TabVoice { \voiceTwo \easyalto }

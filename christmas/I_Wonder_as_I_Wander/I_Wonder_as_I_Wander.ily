@@ -10,7 +10,7 @@
     tagline = ""
   }
 
-drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
+low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 
 % Chords

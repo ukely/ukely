@@ -5,7 +5,7 @@
 \header {
     title = "title here"
     composer = "comp"
-    instrument = "Drop-G Ukulele"
+    instrument = "Low-G Ukulele"
     arranger = "arr. Jordan Anderson"
     % these appear at bottom of page
     copyright = "© 1978 by dude.
@@ -16,7 +16,7 @@ This song may be copied for incidental, noncommercial stuff."
 % Fret chords at top of piece
 
 \include "predefined-ukulele-fretboards.ly"
-drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
+low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 % to change a chord shape
 %\storePredefinedDiagram #default-fret-table
@@ -96,7 +96,7 @@ verseThree = \lyricmode {
       >>
 
       \new TabStaff <<
-        \set TabStaff.stringTunings = #drop-g-ukulele-tuning
+        \set TabStaff.stringTunings = #low-g-ukulele-tuning
         \absolute <<
           \new TabVoice { \voiceOne \melody }
           \new TabVoice { \voiceTwo \alto }

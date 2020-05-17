@@ -12,7 +12,7 @@
     tagline = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/when-i-am-baptized"
   }
 
-drop-g-ukulele-tuning = \stringTuning <g c' e' a'>
+low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 \storePredefinedDiagram #default-fret-table
                         \chordmode { d:7 }
