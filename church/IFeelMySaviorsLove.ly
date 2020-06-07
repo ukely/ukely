@@ -138,6 +138,8 @@ verseFour = \lyricmode {
 }
 
 \score {
+  \layout { }
+  \midi {\tempo 4 = 84}
   <<
     \new ChordNames \StaffChords
     \new StaffGroup <<
@@ -145,6 +147,7 @@ verseFour = \lyricmode {
         \time 4/4
         \clef treble
         \key f \major
+        \set Staff.midiInstrument = "acoustic guitar (nylon)"
         \partial 4
         \new Voice = "melodyVoice" { \voiceOne \melody }
         \new Voice { \voiceTwo \alto }

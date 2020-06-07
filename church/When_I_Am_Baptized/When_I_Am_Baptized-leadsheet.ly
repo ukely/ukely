@@ -5,6 +5,8 @@
 }
 
 \score {
+  \layout { }
+  \midi {\tempo 4 = 72}
   <<
     \new ChordNames \StaffChords
     \new FretBoards {
@@ -16,6 +18,7 @@
       \new TabStaff <<
         \time 2/4
         \key f \major
+        \set Staff.midiInstrument = "acoustic guitar (nylon)"
         \partial 8
         \set TabStaff.stringTunings = #low-g-ukulele-tuning
         \new TabVoice = "melodyVoice" { \voiceOne \leadmelody }

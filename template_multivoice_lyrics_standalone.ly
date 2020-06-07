@@ -80,12 +80,15 @@ verseThree = \lyricmode {
 }
 
 \score {
+  \layout { }
+  \midi {\tempo 4 = 80}
   <<
     \new ChordNames \StaffChords
     \new StaffGroup <<
       \new Staff <<
         \time 4/4
         \clef treble
+        \set Staff.midiInstrument = "acoustic guitar (nylon)"
         \key f \major
         \partial 4
         \new Voice = "melodyVoice" { \voiceOne \melody }

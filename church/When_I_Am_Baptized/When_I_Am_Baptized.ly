@@ -17,12 +17,15 @@
 }
 
 \score {
+  \layout { }
+  \midi {\tempo 4 = 72}
   <<
     \new ChordNames \StaffChords
     \new StaffGroup <<
       \new Staff <<
         \time 2/4
         \key f \major
+        \set Staff.midiInstrument = "acoustic guitar (nylon)"
         \partial 8
         \new Voice = "melodyVoice" { \voiceOne \leadmelody }
         \new Voice { \voiceTwo \easyalto }

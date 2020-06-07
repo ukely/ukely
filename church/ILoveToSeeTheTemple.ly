@@ -104,6 +104,8 @@ verseTwo = \lyricmode {
 }
 
 \score {
+  \layout { }
+  \midi {\tempo 4 = 88}
   <<
     \new ChordNames \StaffChords
     \new StaffGroup <<
@@ -111,6 +113,7 @@ verseTwo = \lyricmode {
         \time 3/4
         \clef treble
         \key f \major
+        \set Staff.midiInstrument = "acoustic guitar (nylon)"
         \partial 4
         \new Voice = "melodyVoice" { \voiceOne \melody }
         \new Voice { \voiceTwo \alto }

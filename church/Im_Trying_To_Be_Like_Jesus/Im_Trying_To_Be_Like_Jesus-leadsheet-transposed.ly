@@ -10,6 +10,8 @@ transposedintro = \transpose bf c' \leadintro
 transposedmelody = \transpose bf c' \leadmelody
 
 \score {
+  \layout { }
+  \midi {\tempo 8 = 116}
   <<
     \new ChordNames \transposedstaff
     \new FretBoards {
@@ -21,6 +23,7 @@ transposedmelody = \transpose bf c' \leadmelody
       \new TabStaff <<
         \time 6/8
         \key bf \major
+        \set Staff.midiInstrument = "acoustic guitar (nylon)"
         \set TabStaff.stringTunings = #ukulele-tuning
         \new TabVoice { \voiceOne \transposedintro }
         \new TabVoice = "melodyVoice" { \voiceOne \transposedmelody }

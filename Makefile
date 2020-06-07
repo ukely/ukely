@@ -1,9 +1,10 @@
 # determine how many processors are present
-CPU_CORES=`cat /proc/cpuinfo | grep -m1 "cpu cores" | sed s/".*: "//`
+CPU_CORES:=$(shell cat /proc/cpuinfo | grep -m1 "cpu cores" | sed s/".*: "//)
 # The command to run lilypond
 LILY_CMD = lilypond -ddelete-intermediate-files \
                     -dno-point-and-click -djob-count=$(CPU_CORES)
 PDFDIR = pdf
+MIDIDIR = midi
 
 # The suffixes used in this Makefile.
 #.SUFFIXES: .ly .ily .pdf .midi
@@ -20,15 +21,20 @@ PDFDIR = pdf
 $(PDFDIR)/%.pdf: %.ly $$(wildcard $$(shell echo "%" | cut -d"-" -f1).ily)
 	@mkdir -p $(dir $@)
 	@echo
-	@echo "----------- Creating $(notdir $@) -----------"
-	$(LILY_CMD) $<; \
-	if test -f "$(notdir $*).pdf"; then \
+	@echo "----------- Creating $(basename $(notdir $@)) -----------"
+	$(LILY_CMD) $<
+	@if test -f "$(notdir $*).pdf"; then \
 	    mv "$(notdir $*).pdf" $(PDFDIR)/$(subst .ly,.pdf,$<); \
-	fi; \
-# TODO, add midi targets?
-#	if test -f "$(notdir $*).midi"; then \
-#	    mv "$(notdir $*).midi" $(MIDIDIR)/$(subst .ly,.pdf,$<); \
-#	fi
+	    echo Created $(PDFDIR)/$(subst .ly,.pdf,$<); \
+	else \
+	    echo "Couldn't find $(notdir $*).pdf"; \
+	fi;
+
+	@mkdir -p $(subst $(PDFDIR),$(MIDIDIR),$(dir $@))
+	@if test -f "$(notdir $*).midi"; then \
+	    mv "$(notdir $*).midi" $(MIDIDIR)/$(subst .ly,.midi,$<); \
+	    echo Created $(MIDIDIR)/$(subst .ly,.midi,$<); \
+	fi
 
 songs=$(shell find . -name "*.ly" | grep -v template)
 
@@ -41,11 +47,19 @@ print-%  : ; @echo $* = $($*)
 .PHONY: release
 release: $(pdfs)
 	cd $(PDFDIR) && zip -r ../pdfs-$(shell date '+%Y%m%d').zip *
+	cd $(MIDIDIR) && zip -r ../midis-$(shell date '+%Y%m%d').zip *
 
 .PHONY: clean
 clean:
-	rm -rf $(PDFDIR)
+	rm -rf $(PDFDIR) $(MIDIDIR)
 
-.PHONY: clean-all-pdf
-clean-all-pdf:
+.PHONY: cleanall-pdf
+cleanall-pdf:
 	find . -name "*.pdf" -delete
+
+.PHONY: cleanall-midi
+cleanall-midi:
+	find . -name "*.midi" -delete
+
+.PHONY: cleanall
+cleanall: cleanall-pdf cleanall-midi

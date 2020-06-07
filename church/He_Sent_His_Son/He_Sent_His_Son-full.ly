@@ -17,6 +17,8 @@
 }
 
 \score {
+  \layout { }
+  \midi {\tempo 4 = 80}
   <<
     \new ChordNames \StaffChords
     \new StaffGroup <<
@@ -24,6 +26,7 @@
         \time 3/4
         \clef treble
         \key f \major
+        \set Staff.midiInstrument = "acoustic guitar (nylon)"
         \new Voice { \intro }
         \new Voice = "melodyVoice" { \voiceOne \melody }
         \new Voice { \voiceTwo \alto }
