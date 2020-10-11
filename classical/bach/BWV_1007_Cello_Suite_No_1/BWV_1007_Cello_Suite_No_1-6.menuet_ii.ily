@@ -1,3 +1,5 @@
+\include "../../../lib/barre.ily"
+
 menuetII =  {
 
 	\time 3/4
@@ -25,7 +27,7 @@ menuetII =  {
         % 16
         bes f d f bes,4 |
         b8( d f) aes g f |
-	ees( g c d) ees4 |
+	\fbarre #"III"{ees( g c d) ees4} |
         a,,8( c ees) g f ees |
         d( f bes c) d4 |
         % 21
