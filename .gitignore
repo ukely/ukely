@@ -1,4 +1,6 @@
 *.pdf
+*.midi
+*.zip
 
 # emacs stuff
 *~
