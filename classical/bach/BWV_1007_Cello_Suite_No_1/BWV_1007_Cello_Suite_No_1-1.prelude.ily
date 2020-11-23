@@ -11,9 +11,9 @@ prelude = {
 	g,( e' c') b c e, c' e, g,( e' c') b c e, c' e, |
 	g,( fis' c') b c fis, c' fis, g,( fis' c') b c fis, c' fis, |
 	g,( g' b) a b g b g g,( g' b) a b g b fis |
-	g,( e' b') a b g fis g e g fis g b, d cis b |
+	g,( e' b') a b g fis g e g fis g b, d\4 cis\4 b |
 	% 6
-	cis( g' a) g a g a g cis,( g' a) g a g a g |
+	cis\4( g'\3 a\2) g\3 a\2 g\3 a\2 g\3 cis,\4( g'\3 a\2) g\3 a\2 g\3 a\2 g\3 |
 	fis\3( a\2 d) cis d a g a fis a g a d, fis e d |
 	e\3( b g') fis g b, g' b, e\3( b g') fis g b, g' b, |
 	e\3( cis d) e\3 d cis b a g'( fis e) d' cis b a g |
@@ -23,7 +23,7 @@ prelude = {
 	c( e a) b c a e d c( e a) b c a fis! e |
 	dis( fis dis) fis a fis a fis dis( fis dis) fis a fis a fis |
 	g( fis e) g fis g a fis g fis e d c b a g |
-	a( c d) c d c d c a( c d) c d c d c |
+	a( c\4 d) c\4 d c\4 d c\4 a( c\4 d) c\4 d c\4 d c\4 |
 	% 16
 	g( b f') e f b, f' b, g( b f') e f b, f' b, |
 	g( c e) d e c e c g( c e) d e c e c |
