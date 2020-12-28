@@ -62,4 +62,4 @@ cleanall-midi:
 	find . -name "*.midi" -delete
 
 .PHONY: cleanall
-cleanall: cleanall-pdf cleanall-midi
+cleanall: clean cleanall-pdf cleanall-midi
