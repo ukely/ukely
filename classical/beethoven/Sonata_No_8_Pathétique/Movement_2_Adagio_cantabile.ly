@@ -13,7 +13,7 @@ low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 
 \score {
-  \layout { }
+  \layout { \omit Voice.StringNumber }
   \header { }
   \midi { }
   <<

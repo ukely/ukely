@@ -12,7 +12,7 @@ transposedsop = \transpose g d \sopMusic
                         #ukulele-tuning
                         #"o;2-2;o;1-1;"
 \score {
-  \layout { }
+  \layout { \omit Voice.StringNumber }
   \midi {\tempo 4 = 115}
   <<
     \new ChordNames \transposedstaff

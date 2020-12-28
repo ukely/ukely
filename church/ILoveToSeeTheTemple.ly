@@ -104,7 +104,7 @@ verseTwo = \lyricmode {
 }
 
 \score {
-  \layout { }
+  \layout { \omit Voice.StringNumber }
   \midi {\tempo 4 = 88}
   <<
     \new ChordNames \StaffChords

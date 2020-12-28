@@ -17,7 +17,7 @@
 }
 
 \score {
-  \layout { }
+  \layout { \omit Voice.StringNumber }
   \midi {\tempo 4 = 72}
   <<
     \new ChordNames \StaffChords
