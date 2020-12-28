@@ -10,14 +10,22 @@ transposedintro = \transpose bf c' \leadintro
 transposedmelody = \transpose bf c' \leadmelody
 
 \score {
+  <<
+    \new ChordNames {
+      \TopChords
+    }
+    \new FretBoards {
+      \set Staff.stringTunings = #ukulele-tuning
+      \TopChords
+    }
+  >>
+}
+
+\score {
   \layout { \omit Voice.StringNumber }
   \midi {\tempo 8 = 116}
   <<
     \new ChordNames \transposedstaff
-    \new FretBoards {
-      \set Staff.stringTunings = #ukulele-tuning
-      \transposedstaff
-    }
     \new StaffGroup <<
 
       \new TabStaff <<
@@ -25,6 +33,7 @@ transposedmelody = \transpose bf c' \leadmelody
         \key bf \major
         \set Staff.midiInstrument = "acoustic guitar (nylon)"
         \set TabStaff.stringTunings = #ukulele-tuning
+        \tabFullNotation
         \new TabVoice { \voiceOne \transposedintro }
         \new TabVoice = "melodyVoice" { \voiceOne \transposedmelody }
         \new Lyrics \lyricsto "melodyVoice" \verseOne

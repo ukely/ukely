@@ -28,6 +28,7 @@ transposedsop = \transpose ef d \sopMusic
         \key ef \major
         \set Staff.midiInstrument = "acoustic guitar (nylon)"
         \set TabStaff.stringTunings = #low-g-ukulele-tuning
+        \tabFullNotation
         \new TabVoice = "melodyVoice" { \voiceOne \transposedsop }
         \new Lyrics \lyricsto "melodyVoice" \verseOne
         \new Lyrics \lyricsto "melodyVoice" \verseTwo

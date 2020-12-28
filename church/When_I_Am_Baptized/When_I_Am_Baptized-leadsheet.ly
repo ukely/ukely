@@ -20,6 +20,7 @@
         \key f \major
         \set Staff.midiInstrument = "acoustic guitar (nylon)"
         \partial 8
+        \tabFullNotation
         \set TabStaff.stringTunings = #low-g-ukulele-tuning
         \new TabVoice = "melodyVoice" { \voiceOne \leadmelody }
         \new Lyrics \lyricsto "melodyVoice" \verseOne

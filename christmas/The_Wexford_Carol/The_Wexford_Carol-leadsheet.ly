@@ -5,14 +5,22 @@
 }
 
 \score {
+  <<
+    \new ChordNames {
+      \TopChords
+    }
+    \new FretBoards {
+      \set Staff.stringTunings = #ukulele-tuning
+      \TopChords
+    }
+  >>
+}
+
+\score {
   \layout { \omit Voice.StringNumber }
   \midi {\tempo 4 = 120}
   <<
     \new ChordNames \StaffChords
-    \new FretBoards {
-      \set Staff.stringTunings = #ukulele-tuning
-      \StaffChords
-    }
     \new StaffGroup <<
 
       \new TabStaff <<
@@ -20,6 +28,7 @@
         \key g \major
         \set Staff.midiInstrument = "acoustic guitar (nylon)"
         \set TabStaff.stringTunings = #low-g-ukulele-tuning
+        \tabFullNotation
         \new TabVoice = "melodyVoice" { \voiceOne \sopMusic }
         \new Lyrics \lyricsto "melodyVoice" \verseOne
         \new Lyrics \lyricsto "melodyVoice" \verseTwo
