@@ -75,7 +75,7 @@ fullalto = {
   % For poor on'ry people like you and like I...
   s4 <a c' e'>2 c'4 <a f'>2. <a d' fs'>  <c'\4 e'\3>2
   % I wonder as I wander out under the sky.
-  s4 <a c' e'>2 <c' e'>4 fs' <f' a'\2> s <e' a'>2 <g c'>4 a2
+  s4 <a c' e'>2 <c' e'>4 fs' <f' a'\2> s <e'\3 a'\2>2 <g c'>4 a2
 }
 
 verseOne = \lyricmode {
