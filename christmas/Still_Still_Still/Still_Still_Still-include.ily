@@ -59,9 +59,9 @@ altoMusic = \relative c' {
   ef ef8[ f\3] g4 ef |
 
   g2 ef |
-  s2. s4 |
+  g,2. c4\4 |
   c2 bf4 s |
-  s1 \bar "|."
+  g1 \bar "|."
 }
 
 tenorMusic = \relative c' {
@@ -76,9 +76,9 @@ tenorMusic = \relative c' {
   bf2 bf2 |
 
   bf2 bf |
-  g2. g4 |
+  s2. s4 |
   af2 s4 af |
-  g1 \bar "|."
+  s1 \bar "|."
 }
 tenorWords = \lyricmode {
 
