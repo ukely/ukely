@@ -1,13 +1,13 @@
 \version "2.20.0"
 \include "header.ily"
 \include "predefined-ukulele-fretboards.ly"
-\include "BWV_1007_Cello_Suite_No_1-1.prelude.ily"
-\include "BWV_1007_Cello_Suite_No_1-2.allemande.ily"
-\include "BWV_1007_Cello_Suite_No_1-3.courante.ily"
-\include "BWV_1007_Cello_Suite_No_1-4.sarabande.ily"
-\include "BWV_1007_Cello_Suite_No_1-5.menuet_i.ily"
-\include "BWV_1007_Cello_Suite_No_1-6.menuet_ii.ily"
-\include "BWV_1007_Cello_Suite_No_1-7.gigue.ily"
+\include "BWV_1008_Cello_Suite_No_2-1.prelude.ily"
+\include "BWV_1008_Cello_Suite_No_2-2.allemande.ily"
+\include "BWV_1008_Cello_Suite_No_2-3.courante.ily"
+\include "BWV_1008_Cello_Suite_No_2-4.sarabande.ily"
+\include "BWV_1008_Cello_Suite_No_2-5.menuet_i.ily"
+\include "BWV_1008_Cello_Suite_No_2-6.menuet_ii.ily"
+\include "BWV_1008_Cello_Suite_No_2-7.gigue.ily"
 
 low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
@@ -17,7 +17,6 @@ low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 \book {
 
-  \pageBreak
   \score {
     \layout {  }
     \header { piece = "Prélude" }
@@ -43,7 +42,7 @@ low-g-ukulele-tuning = \stringTuning <g c' e' a'>
   \pageBreak
 
   \score {
-    \layout {  }
+    \layout { system-count = #16 }
     \header { piece = "Courante" }
     \new TabStaff <<
       \tabFullNotation
@@ -54,7 +53,7 @@ low-g-ukulele-tuning = \stringTuning <g c' e' a'>
   \pageBreak
 
   \score {
-    \layout {  }
+    \layout { system-count = #7 }
     \header { piece = "Sarabande" }
     \new TabStaff <<
       \tabFullNotation
@@ -62,6 +61,7 @@ low-g-ukulele-tuning = \stringTuning <g c' e' a'>
       \relative \new TabVoice { \sarabande }
     >>
   }
+  \pageBreak
 
   \score {
     \layout { system-count = #5 }
@@ -72,7 +72,6 @@ low-g-ukulele-tuning = \stringTuning <g c' e' a'>
       \relative \new TabVoice { \menuetI }
     >>
   }
-  \pageBreak
 
   \score {
     \layout { system-count = #4 }
@@ -83,6 +82,7 @@ low-g-ukulele-tuning = \stringTuning <g c' e' a'>
       \relative \new TabVoice { \menuetII }
     >>
   }
+  \pageBreak
 
   \score {
     \layout {  }

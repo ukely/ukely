@@ -17,7 +17,6 @@ low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 
 \book {
 
-  \pageBreak
   \score {
     \layout {  }
     \header { piece = "Prélude" }
