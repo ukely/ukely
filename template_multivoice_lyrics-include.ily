@@ -17,7 +17,7 @@ low-g-ukulele-tuning = \stringTuning <g c' e' a'>
 \storePredefinedDiagram #default-fret-table
                         \chordmode { d:7 }
                         #ukulele-tuning
-                        #"2-2;o;2-3;o;"
+                        #"2-2;o;2-3;o;" %fret-finger low;c;e;high
 
 % Chords
 
