@@ -31,7 +31,7 @@ low-g-ukulele-tuning = \stringTuning <g c' e' a'>
   \pageBreak
 
   \score {
-    \layout { system-count = #10 }
+    \layout { system-count = #18 }
     \header { piece = "Allemande" }
     \new TabStaff <<
       \time 2/2
