@@ -54,9 +54,9 @@ prelude = {
 	% 36
 	<<{s a[ s a] s a[ s a]} \\
           {a\2[ s g] s a\2[ s fis] s}>> g a fis a g a e a |
-	fis a d, e f d fis d g d gis d a' d, bes' d, |
-	b'! d, c' d, cis' d, d' d, ees' d,
-             \fbarre #"VII"{e' d,\4 f' d,\4 fis' d,\4 |
+	fis\3 a d,\4 e\3 f\3 d\4 fis\3 d\4 g\3 d\4 gis\3 d\4 a'\3 d,\4 bes'\3 d,\4 |
+	\fbarre #"VII"{b'!\2 d,\4 c'\2 d,\4 cis'\2 d,\4 d'\2 d,\4 ees'\2 d,\4
+             e' d,\4 f' d,\4 fis' d,\4 |
 	g'( b,\2 d,\4) b'\2 g' b,\2 g' b,\2 g'( b,\2 d,\4) b'\2 g' b,\2 g' b,\2 |
 	g'( a,\3 d,\4) a'\3 g' a,\3 g' a,\3 g'( a,\3 d,\4) a'\3 g' a,\3 g' a,\3 |
 	% 41
