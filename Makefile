@@ -5,6 +5,7 @@ LILY_CMD = lilypond -ddelete-intermediate-files \
                     -dno-point-and-click -djob-count=$(CPU_CORES)
 PDFDIR = pdf
 MIDIDIR = midi
+EXCLUDE_FIND = -not -path "./work/*"
 
 # The suffixes used in this Makefile.
 #.SUFFIXES: .ly .ily .pdf .midi
@@ -36,7 +37,7 @@ $(PDFDIR)/%.pdf: %.ly $$(wildcard $$(shell echo "%" | cut -d"-" -f1).ily)
 	    echo Created $(MIDIDIR)/$(subst .ly,.midi,$<); \
 	fi
 
-songs=$(shell find . -name "*.ly" | grep -v template)
+songs=$(shell find . -name "*.ly" $(EXCLUDE_FIND) | grep -v template)
 
 pdfs=$(addprefix $(PDFDIR)/,$(songs:.ly=.pdf))
 
@@ -55,11 +56,11 @@ clean:
 
 .PHONY: cleanall-pdf
 cleanall-pdf:
-	find . -name "*.pdf" -delete
+	find . -name "*.pdf" $(EXCLUDE_FIND) -delete
 
 .PHONY: cleanall-midi
 cleanall-midi:
-	find . -name "*.midi" -delete
+	find . -name "*.midi" $(EXCLUDE_FIND) -delete
 
 .PHONY: cleanall
 cleanall: clean cleanall-pdf cleanall-midi
